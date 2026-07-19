@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharvina Roseline D | CSE Profile</title>
+    <style>
+        /* Modern CSS Variables & Reset Rules */
+        :root {
+            --primary: #3182ce;
+            --primary-dark: #2b6cb0;
+            --primary-light: #ebf8ff;
+            --text-main: #2d3748;
+            --text-muted: #4a5568;
+            --bg-body: #f7fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --radius: 8px;
+            --transition: all 0.2s ease-in-out;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            padding: 1rem;
+        }
+
+        /* Responsive Layout Container Wrapper */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Identity and Contact Component Blocks */
+        header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.025em;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Section Document Architecture */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: #1a202c;
+            margin-bottom: 0.25rem;
+        }
+
+        p {
+            margin-bottom: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Structural Grid Component Cards */
+        .item-group {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .item-group:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Flexible Meta-Lines for Layout Formatting */
+        .meta-line {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .meta-line span:last-child {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Fully Responsive CSS Grid Engine for Technical Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .skill-category {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1rem;
+        }
+
+        .skill-category strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a202c;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Technologies Presentation Footer Line inside Cards */
+        .tech-stack {
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed var(--border-color);
+            font-size: 0.85rem;
+        }
+
+        /* Adaptive Footer Elements */
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #a0aec0;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        /* ==========================================================================
+           RESPONSIVE DESIGN SYSTEM MEDIA QUERIES
+           ========================================================================== */
+        
+        /* Tablet Devices Breakpoint (600px and up) */
+        @media (min-width: 600px) {
+            body {
+                padding: 2rem;
+            }
+            .container {
+                padding: 2.5rem;
+            }
+            header {
+                text-align: left;
+            }
+            .contact-info {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 0.5rem 1.5rem;
+            }
+            .meta-line {
+                flex-direction: row;
+            }
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop viewports (850px and up) */
+        @media (min-width: 850px) {
+            .skills-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Block: Identity and Contacts -->
+        <header>
+            <h1>Sharvina Roseline D</h1>
+            <div class="contact-info">
+                <span><strong>Phone:</strong> +91 9384462251</span>
+                <span><strong>Email:</strong> <a href="mailto:sharvinaroseline7@gmail.com">sharvinaroseline7@gmail.com</a></span>
+                <span><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sharvina-roseline-d" target="_blank" rel="noopener">linkedin.com/in/sharvina-roseline-d</a></span>
+                <span><strong>GitHub:</strong> <a href="https://github.com/Sharvina-Roseline" target="_blank" rel="noopener">github.com/Sharvina-Roseline</a></span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Objective Section -->
+            <section id="objective">
+                <h2>Objective</h2>
+                <p>Computer Science Engineering student with a strong foundation in programming, data structures, and software development. Seeking an entry-level opportunity to apply technical skills, learn industry best practices, and contribute to organizational success.</p>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education">
+                <h2>Education</h2>
+                
+                <article class="item-group">
+                    <div class="meta-line">
+                        <span>Velammal Institute of Technology</span>
+                        <span>2023 - 2027</span>
+                    </div>
+                    <h3>B.E. Computer Science and Engineering</h3>
+                    <p>CGPA: 8.95 / 10</p>
+                </article>
+
+                <article class="item-group">
+                    <div class="meta-line">
+                        <span>St. Anne's Matriculation Higher Secondary School</span>
+                        <span>2022 - 2023</span>
+                    </div>
+                    <h3>Higher Secondary Certificate (HSC)</h3>
+                    <p>Percentage: 86.6%</p>
+                </article>
+
+                <article class="item-group">
+                    <div class="meta-line">
+                        <span>St. Anne's Matriculation Higher Secondary School</span>
+                        <span>2020 - 2021</span>
+                    </div>
+                    <h3>Secondary School Leaving Certificate (SSLC)</h3>
+                </article>
+            </section>
+
+            <!-- Technical Skills Section -->
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <strong>Programming</strong>
+                        <div class="tags">
+                            <span class="tag">C</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Web Technologies</strong>
+                        <div class="tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">React.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Database</strong>
+                        <div class="tags">
+                            <span class="tag">MySQL</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Tools</strong>
+                        <div class="tags">
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">VS Code</span>
+                            <span class="tag">Eclipse IDE</span>
+                            <span class="tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Internships Section -->
+            <section id="internships">
+                <h2>Alternative Internships</h2>
+
+                <article class="item-group">
+                    <div class="meta-line">
+                        <span>Codtech IT Solutions Private Limited</span>
+                        <span>4 Weeks</span>
+                    </div>
+                    <h3>Java Programming Internship</h3>
+                    <ul>
+                        <li>Gained hands-on experience in Java programming through real-time project tasks.</li>
+                        <li>Improved coding, debugging, and problem-solving skills.</li>
+                        <li>Applied core programming concepts to develop structured solutions.</li>
+                    </ul>
+                </article>
+
+                <article class="item-group">
+                    <div class="meta-line">
+                        <span>AdroIT Technologies Innovative Solutions Pvt. Ltd.</span>
+                        <span>6 Weeks</span>
+                    </div>
+                    <h3>MERN Stack Development</h3>
+                    <ul>
+                        <li>Developed and tested payroll management system.</li>
+                        <li>Automated salary calculation and employee record management.</li>
+                        <li>Gained hands-on experience in software development and database management.</li>
+                    </ul>
+                </article>
+
+                <article class="item-group">
+                    <div class="meta-line">
+                        <span>Dream Code Academy</span>
+                        <span>4 Weeks</span>
+                    </div>
+                    <h3>Full Stack Development Intern (Java)</h3>
+                    <ul>
+                        <li>Developed and tested Java-based full stack web application modules.</li>
+                        <li>Implemented frontend, backend, and database functionalities using industry-standard development practices.</li>
+                        <li>Enhanced problem-solving, debugging, version control (Git/GitHub), and collaborative development skills through practical project work.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <article class="item-group">
+                    <h3>CertiChain — Academic Certificate Verification System</h3>
+                    <p>Developed a secure, full-stack web application for issuing, storing, and verifying academic certificates using blockchain technology, enabling tamper-proof digital credentials with role-based access for students, university administrators, and employers.</p>
+                    <p>Implemented Ethereum smart contract integration, IPFS-based certificate storage, QR code verification, JWT authentication, interactive analytics dashboards, and a responsive SaaS-inspired user interface to ensure secure, transparent, and efficient certificate validation.</p>
+                    <div class="tech-stack">
+                        <strong>Stack:</strong> React.js, Vite, TypeScript, Tailwind CSS, Node.js, Express.js, MongoDB, Solidity, Hardhat, Ethereum, Ethers.js, IPFS (Pinata), JWT, bcrypt, Cloudinary, Framer Motion, Recharts
+                    </div>
+                </article>
+
+                <article class="item-group">
+                    <h3>Chromaview Color Blindness Simulator</h3>
+                    <p>Developed a responsive web application that simulates Protanopia, Deuteranopia, Tritanopia, and Achromatopsia using HTML5 Canvas and JavaScript-based image processing to visualize color vision deficiencies.</p>
+                    <p>Implemented drag-and-drop image upload, accessibility contrast checking, dark mode, toast notifications, and downloadable simulation outputs, enhancing usability and accessibility awareness.</p>
+                    <div class="tech-stack">
+                        <strong>Stack:</strong> HTML5, CSS3, JavaScript, HTML5 Canvas API, FileReader API, Drag-and-Drop API
+                    </div>
+                </article>
+
+                <article class="item-group">
+                    <h3>Meme Generator — Web-Based Meme Creation Platform</h3>
+                    <p>Developed a responsive web application enabling users to create personalized memes through image upload, customizable captions, live preview, and downloadable outputs using client-side rendering.</p>
+                    <p>Implemented HTML5 Canvas-based image processing, responsive UI, and dynamic DOM manipulation to provide an interactive and seamless meme creation experience.</p>
+                    <div class="tech-stack">
+                        <strong>Stack:</strong> HTML5, CSS3, JavaScript (ES6), HTML5 Canvas API, DOM Manipulation, FileReader API
+                    </div>
+                </article>
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Master Program in Full Stack Development – FITA Academy</li>
+                    <li>Advanced Diploma in Python Programming (ADPP) – CSC Computer Education</li>
+                    <li>Programming using Java – NPTEL</li>
+                    <li>Data Structures and Algorithms using Java – Infosys Springboard</li>
+                </ul>
+            </section>
+        </main>
+
+        
+    </div>
+
+</body>
+</html>
